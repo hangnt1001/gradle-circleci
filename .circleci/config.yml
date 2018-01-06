@@ -54,7 +54,9 @@ jobs:
           - v1-dependencies-
 
       - run: gradle dependencies
-
+      - run:
+         name: chmod permissions
+         command: chmod +x ./gradlew
       # run tests and package
       - run: ./gradlew clean test
 
